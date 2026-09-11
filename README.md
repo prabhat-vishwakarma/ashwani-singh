@@ -1,10 +1,9 @@
-# Ashiwni Singh — Portfolio
+# Ashwani Singh — Portfolio
 
-Personal portfolio of Ashiwni Singh. Features:
+Personal portfolio of Ashwani Singh. Features:
 
 - **Projects** including *Visual Automation* — deterministic browser automation with local OCR (PaddleOCR + OpenCV + Playwright), [open source](https://github.com/prabhat-vishwakarma/visual-automation).
-- **Live demo page** — `demo.gif` plus a try-it-yourself [challenge page](challenge.html).
-- **Overview slidedeck** — `Visual_Automation_Overview.pptx` (downloadable).
+- **Live demo page** — embedded live demo plus a try-it-yourself [challenge page](challenge.html).
 
 ## Local preview
 

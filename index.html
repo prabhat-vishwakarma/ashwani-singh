@@ -20,7 +20,7 @@
       </ul>
     </nav>
     <div class="hero">
-      <h1>Hello, I'm Prabhat</h1>
+      <h1>Hello, I'm Ashwani</h1>
       <p>Web Developer crafting clean, responsive experiences.</p>
       <a href="#projects" class="btn">View My Work</a>
     </div>
@@ -65,17 +65,10 @@
   <section id="demo">
     <div class="container">
       <h2>Live Demo</h2>
-      <p class="demo-note">The capture reader on an authorized test page — OCR reads the code, auto-fills it, and verifies.</p>
-
-      <img class="demo-gif" src="demo.gif" alt="Visual Automation demo animation">
-
-      <div class="demo-actions">
-        <a class="btn" href="https://github.com/prabhat-vishwakarma/visual-automation" target="_blank" rel="noopener">View Code on GitHub</a>
-        <a class="btn btn-dark" href="Visual_Automation_Overview.pptx" download>Download Overview PPT</a>
-        <a class="btn btn-dark" href="challenge.html">Try the Challenge Page</a>
-      </div>
-
-      <p class="demo-fallback">To run the reader for real (2-minute guided setup on any page you own), install it locally — see <a href="https://github.com/prabhat-vishwakarma/visual-automation" target="_blank" rel="noopener">the README</a>.</p>
+      <p class="demo-note">The capture reader running live — OCR reads a code, auto-fills it, and verifies. <span class="badge">needs the local OCR web app running on port 8710</span></p>
+      <iframe class="demo-frame" src="http://127.0.0.1:8710/" title="OCR Reader live demo" loading="lazy"></iframe>
+      <p class="demo-fallback">If the frame is blank, the OCR web app isn't running. Start it from the project repo: <code>webapp/run_webapp.sh</code> and visit <a href="http://127.0.0.1:8710/" target="_blank" rel="noopener">127.0.0.1:8710</a>.</p>
+      <p class="demo-fallback">See the code on <a href="https://github.com/prabhat-vishwakarma/visual-automation" target="_blank" rel="noopener">GitHub</a>, or try the <a href="challenge.html">challenge page</a>.</p>
     </div>
   </section>
 
@@ -99,7 +92,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2026 Prabhat. All rights reserved.</p>
+    <p>&copy; 2026 Ashwani Singh. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>

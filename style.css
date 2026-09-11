@@ -215,40 +215,40 @@ form textarea:focus {
   color: #bbbbbb;
 }
 
-.demo-gif {
+.badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  background: #16213e;
+  border: 1px solid #1f4068;
+  color: #9ecbff;
+  padding: 3px 12px;
+  border-radius: 20px;
+  margin-left: 6px;
+}
+
+.demo-frame {
   display: block;
-  width: min(100%, 620px);
-  margin: 0 auto 26px;
+  width: min(100%, 860px);
+  height: 560px;
+  margin: 0 auto;
   border: 1px solid #1f4068;
   border-radius: 14px;
   background: #0f1220;
 }
 
-.demo-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 18px;
-}
-
-.btn-dark {
-  background: #16213e;
-  border: 1px solid #1f4068;
-  color: #eeeeee;
-}
-
-.btn-dark:hover {
-  background: #1f4068;
-  color: #ffffff;
-}
-
 .demo-fallback {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 16px auto 0;
   text-align: center;
   color: #888;
   font-size: 0.9rem;
+}
+
+.demo-fallback code {
+  background: #16213e;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #eeeeee;
 }
 
 .demo-fallback a {
