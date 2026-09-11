@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCR Challenge — Try the Reader</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #challenge {
+      min-height: calc(100vh - 80px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .chal-card {
+      background: #16213e;
+      border: 1px solid #1f4068;
+      border-radius: 14px;
+      padding: 40px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+    }
+    .chal-card h2 { margin-bottom: 6px; }
+    .chal-card p.note { color: #bbbbbb; font-size: 0.85rem; margin-bottom: 22px; }
+    .chal-card img {
+      border: 2px solid #1f4068; border-radius: 10px; background: #0f0f1f;
+      padding: 6px; margin-bottom: 22px;
+    }
+    .chal-card input {
+      width: 100%; padding: 12px; border: 1px solid #1f4068; border-radius: 8px;
+      background: #0f1220; color: #eeeeee; font-size: 1.3rem; letter-spacing: 6px;
+      text-transform: uppercase; text-align: center; box-sizing: border-box;
+    }
+    .chal-card input:focus { outline: none; border-color: #e94560; }
+    .chal-card .btn { width: 100%; margin-top: 14px; }
+    .status { margin-top: 16px; font-weight: 600; }
+    .success { color: #4ade80; }
+    .error { color: #ff6b81; }
+    .back { display: block; margin-top: 18px; color: #9ecbff; font-size: 0.85rem; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <div id="challenge">
+    <div class="chal-card">
+      <h2>Verification required</h2>
+      <p class="note">This page is part of <strong>my portfolio</strong>. Read the code below and enter it.</p>
+
+      <img data-testid="verification-image" src="challenge.png" alt="Verification code" width="260">
+
+      <input data-testid="verification-input" maxlength="5" autocomplete="off"
+             aria-label="Verification code" placeholder="CODE">
+
+      <button data-testid="continue-button" type="button" class="btn">Continue</button>
+
+      <div data-testid="next-step" class="status success" style="display:none;">Verified &mdash; the reader got it right.</div>
+      <div data-testid="verification-error" class="status error" style="display:none;">Code rejected. Please retry.</div>
+
+      <a class="back" href="index.html">&larr; Back to portfolio</a>
+    </div>
+  </div>
+
+  <script>
+    const EXPECTED = "P9X3K";
+    const input = document.querySelector('[data-testid="verification-input"]');
+    const button = document.querySelector('[data-testid="continue-button"]');
+    const next = document.querySelector('[data-testid="next-step"]');
+    const error = document.querySelector('[data-testid="verification-error"]');
+
+    button.addEventListener("click", function () {
+      error.style.display = "none";
+      const value = input.value.trim().toUpperCase();
+      if (value === EXPECTED) next.style.display = "block";
+      else error.style.display = "block";
+    });
+  </script>
+</body>
+</html>
